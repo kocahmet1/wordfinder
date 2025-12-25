@@ -5,17 +5,17 @@
 }
 
 :root {
-  --bg-primary: #1a1814;
-  --bg-secondary: #252118;
-  --bg-card: #2d2820;
-  --accent: #e8a849;
-  --accent-glow: #e8a84940;
-  --text-primary: #f5f0e8;
-  --text-secondary: #a89f8f;
-  --text-muted: #6b6358;
-  --success: #7cb77c;
-  --error: #d47474;
-  --border: #3d362c;
+  --bg-primary: #e3f2fd;
+  --bg-secondary: #bbdefb;
+  --bg-card: #ffffff;
+  --accent: #1976d2;
+  --accent-glow: #1976d240;
+  --text-primary: #1a237e;
+  --text-secondary: #455a64;
+  --text-muted: #78909c;
+  --success: #4caf50;
+  --error: #e53935;
+  --border: #90caf9;
 }
 
 body {
@@ -41,13 +41,13 @@ body {
   bottom: 0;
   background-image: 
     radial-gradient(circle at 20% 80%, var(--accent-glow) 0%, transparent 40%),
-    radial-gradient(circle at 80% 20%, rgba(139, 90, 43, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(100, 181, 246, 0.3) 0%, transparent 40%),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 50px,
-      rgba(255, 255, 255, 0.01) 50px,
-      rgba(255, 255, 255, 0.01) 51px
+      rgba(25, 118, 210, 0.03) 50px,
+      rgba(25, 118, 210, 0.03) 51px
     );
   pointer-events: none;
   z-index: 0;
@@ -101,15 +101,15 @@ main {
   gap: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 4px 20px rgba(25, 118, 210, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .mic-button:hover:not(:disabled) {
   transform: scale(1.05);
   border-color: var(--accent);
   box-shadow: 
-    0 8px 30px rgba(0, 0, 0, 0.4),
+    0 8px 30px rgba(25, 118, 210, 0.25),
     0 0 40px var(--accent-glow);
 }
 
@@ -119,11 +119,11 @@ main {
 
 .mic-button.listening {
   border-color: var(--accent);
-  background: linear-gradient(145deg, #3d3428, var(--bg-secondary));
+  background: linear-gradient(145deg, #e3f2fd, var(--bg-secondary));
   animation: pulse 1.5s ease-in-out infinite;
   box-shadow: 
     0 0 0 0 var(--accent-glow),
-    0 8px 30px rgba(0, 0, 0, 0.4);
+    0 8px 30px rgba(25, 118, 210, 0.2);
 }
 
 .mic-button.loading {
@@ -250,7 +250,7 @@ main {
   border-radius: 16px;
   padding: 2rem;
   animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px rgba(25, 118, 210, 0.12);
 }
 
 @keyframes slideUp {
@@ -456,7 +456,7 @@ main {
   border-radius: 16px;
   padding: 1.5rem;
   animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px rgba(25, 118, 210, 0.12);
   max-height: 400px;
   overflow: hidden;
   display: flex;
