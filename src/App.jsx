@@ -110,7 +110,7 @@ function App() {
           messages: [
             {
               role: 'system',
-              content: 'You are a concise dictionary helping a Turkish student learn English SAT vocabulary. The student may say the English word with Turkish pronunciation (e.g., "enkaunter" for "encounter", "ditermin" for "determine", "ekspirinıs" for "experience"). Figure out what English word they mean, even if pronounced incorrectly or phonetically in Turkish. Provide a brief, clear definition in TURKISH suitable for a high school student. Keep it under 2 sentences. Format: "[Correct English Word]: [Turkish definition]"'
+              content: 'You are a concise dictionary helping a Turkish student learn English SAT vocabulary. The student is trying to pronounce English words correctly. Even if the pronunciation is not perfect, figure out what English word they mean. Provide a brief, clear definition in TURKISH suitable for a high school student. Keep it under 2 sentences. Format: "[Correct English Word]: [Turkish definition]"'
             },
             {
               role: 'user',
@@ -151,7 +151,7 @@ function App() {
     
     recognitionRef.current.continuous = false
     recognitionRef.current.interimResults = false
-    recognitionRef.current.lang = 'tr-TR' // Turkish recognition - student may read English words with Turkish pronunciation
+    recognitionRef.current.lang = 'en-US' // English recognition - student will try to pronounce words in English
 
     recognitionRef.current.onstart = () => {
       setIsListening(true)
